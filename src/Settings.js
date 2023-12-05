@@ -60,24 +60,13 @@ const Settings = ({ attributes, setAttributes }) => {
 						<RangeControl
 							className="mt20"
 							label={__("Start Offset", "text-path")}
-							value={ strOffset }
+							value={strOffset}
 							onChange={(val) => setAttributes({ strOffset: val })}
 							min={0}
 							max={600}
 							step={1}
 							allowReset={true}
 							resetFallbackValue={200}
-						/>
-
-						<RangeControl
-							label={__("translate-X", "text-path")}
-							value={translateX}
-							onChange={(val) => updateObj('floating', 'translate', val, 'translateX')}
-							min={0}
-							max={100}
-							step={1}
-							allowReset={true}
-							resetFallbackValue={15.8239}
 						/>
 						<SelectControl
 							label="Path Type"
