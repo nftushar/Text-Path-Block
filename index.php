@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Text Path
- * Description: Responsive textPath easy-to-use & more..
+ * Description:easy-to-use Responsive Text Path.
  * Version: 1.0.1
  * Author: bPlugins LLC
  * Author URI: http://bplugins.com
