@@ -3,12 +3,7 @@ import { InspectorControls } from "@wordpress/block-editor";
 import { produce } from 'immer';
 import { PanelBody, PanelRow, TabPanel, TextControl, SelectControl, __experimentalBoxControl as BoxControl, RangeControl, ToggleControl } from "@wordpress/components";
 
-import {
-	BColor,
-	BtnGroup,
-	MultiShadowControl,
-	Typography
-} from "../../Components";
+import { BColor, BtnGroup, MultiShadowControl, Typography } from "../../Components";
 
 const pathAlignments = [
 	{ label: __('left', 'text-path'), value: 'left', icon: 'editor-alignleft' },
@@ -23,6 +18,7 @@ const Settings = ({ attributes, setAttributes }) => {
 	const { rotateX, rotateY, rotateZ, rotateDuration, rotateDelay } = rotate;
 	const { scaleX, scaleY } = scale;
 
+    console.log(fillColor);
 
 	const updateObj = (attr, key, val, nestKey = false) => {
 		const newObj = produce(attributes[attr], draft => {
@@ -270,8 +266,9 @@ const Settings = ({ attributes, setAttributes }) => {
 					>
 						<BColor label={__('Background Color', 'text-path')} value={bgColor} onChange={val => setAttributes({ bgColor: val })} defaultColor='#0000' />
 						<BColor label={__('Stroke Color', 'text-path')} value={strokeColor} onChange={val => setAttributes({ strokeColor: val })} defaultColor='#0000' />
+						
 
-						<BColor label={__('fill Color', 'text-path')} value={fillColor} onChange={val => setAttributes({ fillColor: val })} defaultColor='#ffff' />
+						<BColor label={__('fill Color', 'text-path')} value={fillColor} onChange={val => setAttributes({ fillColor: val })} defaultColor='#00000000' />
 					</PanelBody>
 					<PanelBody
 						className="bPlPanelBody"

@@ -3,9 +3,10 @@ import Style from "./Style"; // Make sure to import the Style component
 
 const Path = ({ attributes }) => {
     const { svgPath, strokeColor, cId, mainText, fillColor, strOffset } = attributes;
+
+
     const svgRef = useRef(null);
     const divRef = useRef(null);
-
     useEffect(() => {
         const svgElement = svgRef.current;
         // const divElement = divRef.current;

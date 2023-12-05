@@ -60,7 +60,7 @@
     },
     "fillColor": {
       "type": "string",
-      "default": "#fff"
+      "default": "#F8FFD2"
     },
     "textColor": {
       "type": "string",
