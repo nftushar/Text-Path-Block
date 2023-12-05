@@ -15,9 +15,12 @@ const Edit = (props) => {
   return <>
     <Settings attributes={attributes} setAttributes={setAttributes} />
     <div id={`bBlocksPath-${clientId}`} className="bBlocksPath">
-      <Style attributes={attributes} clientId={clientId} />
-      <Path attributes={attributes} />
+      <div className="b-text-path">
+        <Style attributes={attributes} clientId={clientId} />
+        <Path id="MyPath" attributes={attributes} />
+      </div>
     </div>
+
   </>;
 };
 

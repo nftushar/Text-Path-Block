@@ -31,10 +31,10 @@ const Style = ({ attributes, clientId }) => {
           }
         } 
         ${pathSl}{
+          justify-content: ${alignment}; 
           background-color:${bgColor}
         }
         ${pathCe}{
-            justify-content: ${alignment}; 
             fill: ${textColor};   
         }   
 

@@ -22,14 +22,14 @@
     "svgPath": {
       "type": "string",
       "default": "M0 50 A50 50, 0, 1, 1, 100 50"
-    },
-    "iconStyle": {
-      "type": "string",
-      "default": "solid"
+    }, 
+    "strOffset":{
+     "type":"number",
+     "default":200
     },
     "mainText": {
       "type": "string",
-      "default": "Add Your Curvy Text Here  Add Your Curvy Text Here"
+      "default": "Add Your Curvy Text Here"
     },
     "padding": {
       "type": "object",
@@ -52,7 +52,7 @@
     },
     "bgColor": {
       "type": "string",
-      "default": "#1BE77E"
+      "default": "#FDFDF3"
     },
     "strokeColor": {
       "type": "string",

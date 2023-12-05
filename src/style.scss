@@ -10,9 +10,11 @@
       margin-top: 40px;
 
       svg {
-          width: 60%;
+        
+          width: 90%;
           overflow: visible;
           border-radius: 10px;
+          margin: auto; /* Center the SVG horizontally */
           display: flex;
           flex-direction: column; /* Ensure child elements are aligned vertically */
 

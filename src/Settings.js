@@ -17,7 +17,7 @@ const pathAlignments = [
 ];
 
 const Settings = ({ attributes, setAttributes }) => {
-	const { svgPath, strokeColor, mainText, padding, alignment, textTypo, textColor, textShadow, fillColor, floating, bgColor } = attributes;
+	const { svgPath, strokeColor, mainText, padding, alignment, textTypo, textColor, textShadow, fillColor, floating, bgColor, strOffset } = attributes;
 	const { translate, rotate, scale, enabled: floatingEnabled } = floating;
 	const { translateX, translateY, duration, delay } = translate;
 	const { rotateX, rotateY, rotateZ, rotateDuration, rotateDelay } = rotate;
@@ -43,8 +43,8 @@ const Settings = ({ attributes, setAttributes }) => {
 			tabs={[
 				{ name: "general", title: __("General") },
 				{ name: "style", title: __("Style") },
-			]}
-		>
+			]} 	>
+
 			{(tab) => <>
 				{tab.name === "general" && (
 					<PanelBody
@@ -56,6 +56,28 @@ const Settings = ({ attributes, setAttributes }) => {
 							label={__("Title Text", "text-path")}
 							value={mainText}
 							onChange={(val) => setAttributes({ mainText: val })}
+						/>
+						<RangeControl
+							className="mt20"
+							label={__("Start Offset", "text-path")}
+							value={ strOffset }
+							onChange={(val) => setAttributes({ strOffset: val })}
+							min={0}
+							max={600}
+							step={1}
+							allowReset={true}
+							resetFallbackValue={200}
+						/>
+
+						<RangeControl
+							label={__("translate-X", "text-path")}
+							value={translateX}
+							onChange={(val) => updateObj('floating', 'translate', val, 'translateX')}
+							min={0}
+							max={100}
+							step={1}
+							allowReset={true}
+							resetFallbackValue={15.8239}
 						/>
 						<SelectControl
 							label="Path Type"
