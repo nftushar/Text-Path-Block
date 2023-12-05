@@ -1,0 +1,115 @@
+{
+  "apiVersion": "1",
+  "name": "b-blocks/text-path",
+  "title": "Text Path",
+  "description": "easy-to-use, responsive text-path and more.",
+  "category": "media",
+  "keywords": [
+    "text-path",
+    "path",
+    "Gutenberg"
+  ],
+  "textdomain": "text-path",
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": ""
+    },
+    "cId": {
+      "type": "string",
+      "default": ""
+    },
+    "svgPath": {
+      "type": "string",
+      "default": "M0 50 A50 50, 0, 1, 1, 100 50"
+    },
+    "iconStyle": {
+      "type": "string",
+      "default": "solid"
+    },
+    "mainText": {
+      "type": "string",
+      "default": "Add Your Curvy Text Here  Add Your Curvy Text Here"
+    },
+    "padding": {
+      "type": "object",
+      "default": {
+        "top": "0px",
+        "right": "0px",
+        "bottom": "0px",
+        "left": "0px"
+      }
+    },
+    "alignment": {
+      "type": "string",
+      "default": "center"
+    },
+    "textTypo": {
+      "type": "object",
+      "default": {
+        "fontSize": "16px"
+      }
+    },
+    "bgColor": {
+      "type": "string",
+      "default": "#1BE77E"
+    },
+    "strokeColor": {
+      "type": "string",
+      "default": "red"
+    },
+    "fillColor": {
+      "type": "string",
+      "default": "#fff"
+    },
+    "textColor": {
+      "type": "string",
+      "default": "#cabc2f"
+    },
+    "textShadow": {
+      "type": "array",
+      "default": []
+    },
+    "floating": {
+      "type": "object",
+      "default": {
+        "enabled": true,
+        "translate": {
+          "translateX": 15.8239,
+          "translateY": 1.08383,
+          "duration": 1000,
+          "delay": 0
+        },
+        "rotate": {
+          "rotateX": -21.5199,
+          "rotateY": 9.75444,
+          "rotateZ": -36.4564,
+          "rotateDuration": 1000,
+          "rotateDelay": 0
+        },
+        "scale": {
+          "scaleX": 0.803472,
+          "scaleY": 1.04335
+        }
+      }
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ],
+    "html": false
+  },
+  "example": {
+    "attributes": {
+      "preview": true,
+      "columns": {
+        "desktop": 1,
+        "tablet": 1,
+        "mobile": 1
+      }
+    }
+  },
+  "editorScript": "file:../dist/editor.js"
+}

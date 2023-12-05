@@ -1,0 +1,100 @@
+# Copyright (C) 2023 bPlugins LLC
+# This file is distributed under the GPLv3.
+msgid ""
+msgstr ""
+"Project-Id-Version: Text Path 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/text-path\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2023-12-03T11:17:41+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.7.1\n"
+"X-Domain: text-path\n"
+
+#. Plugin Name of the plugin
+msgid "Text Path"
+msgstr ""
+
+#. Description of the plugin
+msgid "Responsive textPath easy-to-use & more.."
+msgstr ""
+
+#. Author of the plugin
+msgid "bPlugins LLC"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "http://bplugins.com"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Settings"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Main Text"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Content"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Alignment"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Padding"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Title"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Stroke Color"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "fill Color"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Text Color"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Text Typography"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Text Shadow"
+msgstr ""
+
+#: inc/block.json
+msgctxt "block title"
+msgid "Text Path"
+msgstr ""
+
+#: inc/block.json
+msgctxt "block description"
+msgid "Gutenberg editing with easy-to-use, responsive text-path  more."
+msgstr ""
+
+#: inc/block.json
+msgctxt "block keyword"
+msgid "text-path"
+msgstr ""
+
+#: inc/block.json
+msgctxt "block keyword"
+msgid "Text-Path"
+msgstr ""
+
+#: inc/block.json
+msgctxt "block keyword"
+msgid "Gutenberg"
+msgstr ""

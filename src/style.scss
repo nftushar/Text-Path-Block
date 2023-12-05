@@ -1,0 +1,32 @@
+.bBlocksPath {
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .b-text-path {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+
+      svg {
+          width: 60%;
+          overflow: visible;
+          border-radius: 10px;
+          display: flex;
+          flex-direction: column; /* Ensure child elements are aligned vertically */
+
+          #MyPath {
+              /* Your existing styles for the path */
+
+              text {
+                  textPath {
+                      /* Your existing styles for textPath */
+                      text-anchor: middle; /* Center the text horizontally */
+                      dominant-baseline: middle; /* Center the text vertically */
+                  }
+              }
+          }
+      }
+  }
+}
