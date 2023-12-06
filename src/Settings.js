@@ -17,7 +17,7 @@ const Settings = ({ attributes, setAttributes }) => {
 	const { translateX, translateY, duration, delay } = translate;
 	const { rotateX, rotateY, rotateZ, rotateDuration, rotateDelay } = rotate;
 	const { scaleX, scaleY } = scale;
- 
+
 
 	const updateObj = (attr, key, val, nestKey = false) => {
 		const newObj = produce(attributes[attr], draft => {
@@ -52,17 +52,6 @@ const Settings = ({ attributes, setAttributes }) => {
 							value={mainText}
 							onChange={(val) => setAttributes({ mainText: val })}
 						/>
-						<RangeControl
-							className="mt20"
-							label={__("Start Offset", "text-path")}
-							value={strOffset}
-							onChange={(val) => setAttributes({ strOffset: val })}
-							min={0}
-							max={600}
-							step={1}
-							allowReset={true}
-							resetFallbackValue={200}
-						/>
 						<SelectControl
 							label="Path Type"
 							className="mt20"
@@ -79,6 +68,18 @@ const Settings = ({ attributes, setAttributes }) => {
 							]}
 							onChange={(val) => setAttributes({ svgPath: val })}
 						/>
+						<RangeControl
+							className="mt20"
+							label={__("Start Offset", "text-path")}
+							value={strOffset}
+							onChange={(val) => setAttributes({ strOffset: val })}
+							min={0}
+							max={600}
+							step={1}
+							allowReset={true}
+							resetFallbackValue={200}
+						/>
+
 					</PanelBody>
 				)}
 
@@ -98,6 +99,8 @@ const Settings = ({ attributes, setAttributes }) => {
 							options={pathAlignments} isIcon={true}
 						/>
 
+						<BColor className="mt20" label={__('Background Color', 'text-path')} value={bgColor} onChange={val => setAttributes({ bgColor: val })} defaultColor='#0000' />
+						
 						<PanelRow className="mt20">
 							<BoxControl
 								label={__('Padding', 'text-path')}
@@ -110,6 +113,7 @@ const Settings = ({ attributes, setAttributes }) => {
 								}}
 								onChange={(value) => setAttributes({ padding: value })}
 							/>
+
 						</PanelRow>
 					</PanelBody>
 					<PanelBody
@@ -254,6 +258,7 @@ const Settings = ({ attributes, setAttributes }) => {
 									allowReset={true}
 									resetFallbackValue={1.04335}
 								/>
+
 							</PanelBody>
 						</>}
 					</PanelBody>
@@ -261,11 +266,9 @@ const Settings = ({ attributes, setAttributes }) => {
 					<PanelBody
 						className="bPlPanelBody"
 						title={__("SVG", "text-path")}
-						initialOpen={false}
-					>
-						<BColor label={__('Background Color', 'text-path')} value={bgColor} onChange={val => setAttributes({ bgColor: val })} defaultColor='#0000' />
+						initialOpen={false} >
 						<BColor label={__('Stroke Color', 'text-path')} value={strokeColor} onChange={val => setAttributes({ strokeColor: val })} defaultColor='#0000' />
-						
+
 
 						<BColor label={__('fill Color', 'text-path')} value={fillColor} onChange={val => setAttributes({ fillColor: val })} defaultColor='#00000000' />
 					</PanelBody>

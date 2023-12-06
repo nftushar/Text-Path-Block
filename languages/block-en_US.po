@@ -2,14 +2,14 @@
 # This file is distributed under the GPLv3.
 msgid ""
 msgstr ""
-"Project-Id-Version: Text Path 1.0.1\n"
+"Project-Id-Version: Text Path 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/text-path\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2023-12-05T11:55:15+00:00\n"
+"POT-Creation-Date: 2023-12-06T06:09:03+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.7.1\n"
 "X-Domain: text-path\n"
@@ -19,7 +19,7 @@ msgid "Text Path"
 msgstr ""
 
 #. Description of the plugin
-msgid "easy-to-use Responsive Text Path."
+msgid "Easy-to-use Responsive Text Path."
 msgstr ""
 
 #. Author of the plugin
@@ -46,139 +46,139 @@ msgid "right"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11274
+#: dist/editor.js:11273
 msgid "Settings"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11278
+#: dist/editor.js:11277
 msgid "Title Text"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11284
+#: dist/editor.js:11283
 msgid "Start Offset"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11316
+#: dist/editor.js:11315
 msgid "Content"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11322
+#: dist/editor.js:11321
 msgid "Alignment"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11330
+#: dist/editor.js:11329
 msgid "Padding"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11344
+#: dist/editor.js:11343
 msgid "Floating"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11356
+#: dist/editor.js:11355
 msgid "Translate"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11359
+#: dist/editor.js:11358
 msgid "translate-X"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11371
+#: dist/editor.js:11370
 msgid "translate-Y"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11381
-#: dist/editor.js:11438
+#: dist/editor.js:11380
+#: dist/editor.js:11437
 msgid "duration"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11391
-#: dist/editor.js:11448
+#: dist/editor.js:11390
+#: dist/editor.js:11447
 msgid "delay"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11405
+#: dist/editor.js:11404
 msgid "Rotate"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11408
+#: dist/editor.js:11407
 msgid "Rotate-X"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11418
+#: dist/editor.js:11417
 msgid "Rotate-Y"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11428
+#: dist/editor.js:11427
 msgid "Rotate-Z"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11462
+#: dist/editor.js:11461
 msgid "Scale"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11465
+#: dist/editor.js:11464
 msgid "scale-X"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11475
+#: dist/editor.js:11474
 msgid "scale-Y"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11490
+#: dist/editor.js:11489
 msgid "SVG"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11493
+#: dist/editor.js:11492
 msgid "Background Color"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11494
+#: dist/editor.js:11493
 msgid "Stroke Color"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11497
+#: dist/editor.js:11496
 msgid "fill Color"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11501
+#: dist/editor.js:11500
 msgid "Title"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11504
+#: dist/editor.js:11503
 msgid "Title Color"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11506
+#: dist/editor.js:11505
 msgid "Title Typography"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:11508
+#: dist/editor.js:11507
 msgid "Title Shadow"
 msgstr ""
 
@@ -189,7 +189,7 @@ msgstr ""
 
 #: inc/block.json
 msgctxt "block description"
-msgid "easy-to-use, responsive text-path and more."
+msgid "Easy-to-use, responsive text-path and more."
 msgstr ""
 
 #: inc/block.json
