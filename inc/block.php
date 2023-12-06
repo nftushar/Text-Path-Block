@@ -1,5 +1,5 @@
 <?php
-class BDBBlockPath{
+class BDBBlockTextPath{
 	function __construct(){
 		add_action( 'init', [$this, 'onInit'] );
 	}
@@ -31,4 +31,4 @@ class BDBBlockPath{
 		<?php return ob_get_clean();
 	} // Render
 }
-new BDBBlockPath();
+new BDBBlockTextPath();

@@ -2,7 +2,7 @@
   "apiVersion": "1",
   "name": "b-blocks/text-path",
   "title": "Text Path",
-  "description": "easy-to-use, responsive text-path and more.",
+  "description": "Easy-to-use, responsive text-path and more.",
   "category": "media",
   "keywords": [
     "text-path",
@@ -64,7 +64,7 @@
     },
     "textColor": {
       "type": "string",
-      "default": "#cabc2f"
+      "default": "#000000"
     },
     "textShadow": {
       "type": "array",

@@ -17,8 +17,7 @@ const Settings = ({ attributes, setAttributes }) => {
 	const { translateX, translateY, duration, delay } = translate;
 	const { rotateX, rotateY, rotateZ, rotateDuration, rotateDelay } = rotate;
 	const { scaleX, scaleY } = scale;
-
-    console.log(fillColor);
+ 
 
 	const updateObj = (attr, key, val, nestKey = false) => {
 		const newObj = produce(attributes[attr], draft => {
