@@ -31,6 +31,7 @@ const Style = ({ attributes, clientId }) => {
           }
         } 
         ${pathSl}{
+          display: flex;
           justify-content: ${alignment}; 
           background-color:${bgColor}
         }

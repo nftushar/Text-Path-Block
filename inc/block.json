@@ -19,13 +19,17 @@
       "type": "string",
       "default": ""
     },
+    "mainSvg": {
+      "type": "string",
+      "default": ""
+    },
     "svgPath": {
       "type": "string",
       "default": "M0 50 A50 50, 0, 1, 1, 100 50"
-    }, 
-    "strOffset":{
-     "type":"number",
-     "default":200
+    },
+    "strOffset": {
+      "type": "number",
+      "default": 200
     },
     "mainText": {
       "type": "string",

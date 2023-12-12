@@ -3,7 +3,7 @@ import { InspectorControls } from "@wordpress/block-editor";
 import { produce } from 'immer';
 import { PanelBody, PanelRow, TabPanel, TextControl, SelectControl, __experimentalBoxControl as BoxControl, RangeControl, ToggleControl } from "@wordpress/components";
 
-import { BColor, BtnGroup, MultiShadowControl, Typography } from "../../Components";
+import { BColor, BtnGroup, MultiShadowControl, Typography, InlineMediaUpload } from "../../Components";
 
 const pathAlignments = [
 	{ label: __('left', 'text-path'), value: 'left', icon: 'editor-alignleft' },
@@ -12,7 +12,7 @@ const pathAlignments = [
 ];
 
 const Settings = ({ attributes, setAttributes }) => {
-	const { svgPath, strokeColor, mainText, padding, alignment, textTypo, textColor, textShadow, fillColor, floating, bgColor, strOffset } = attributes;
+	const { svgPath, strokeColor, mainText, padding, alignment, textTypo, textColor, textShadow, fillColor, floating, bgColor, strOffset, mainSvg } = attributes;
 	const { translate, rotate, scale, enabled: floatingEnabled } = floating;
 	const { translateX, translateY, duration, delay } = translate;
 	const { rotateX, rotateY, rotateZ, rotateDuration, rotateDelay } = rotate;
@@ -45,6 +45,14 @@ const Settings = ({ attributes, setAttributes }) => {
 					<PanelBody
 						className="bPlPanelBody"
 						title={__("Settings", "text-path")} >
+						<InlineMediaUpload
+							allowedTypes={['image']} 
+							value={mainSvg} // You need to pass the appropriate value from your state
+							onChange={url => setAttributes({ mainSvg: url })} // You need to update the attribute accordingly
+							label={__('Upload SVG', 'text-path')}
+							placeholder={__('Enter SVG URL', 'text-path')}
+						/>
+
 						<TextControl
 							labelPosition="left"
 							className="mt20"
@@ -100,7 +108,7 @@ const Settings = ({ attributes, setAttributes }) => {
 						/>
 
 						<BColor className="mt20" label={__('Background Color', 'text-path')} value={bgColor} onChange={val => setAttributes({ bgColor: val })} defaultColor='#0000' />
-						
+
 						<PanelRow className="mt20">
 							<BoxControl
 								label={__('Padding', 'text-path')}

@@ -1,4 +1,6 @@
 <?php
+require_once("BDBMimes.php");
+
 class BDBBlockTextPath{
 	function __construct(){
 		add_action( 'init', [$this, 'onInit'] );
@@ -32,3 +34,5 @@ class BDBBlockTextPath{
 	} // Render
 }
 new BDBBlockTextPath();
+
+
