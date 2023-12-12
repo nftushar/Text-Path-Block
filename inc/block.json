@@ -10,6 +10,7 @@
     "Gutenberg"
   ],
   "textdomain": "text-path",
+  
   "attributes": {
     "align": {
       "type": "string",
@@ -25,7 +26,7 @@
     },
     "svgPath": {
       "type": "string",
-      "default": "M0 50 A50 50, 0, 1, 1, 100 50"
+      "default": "M.25,62.875C.25,28.2882,56.2144.25,125.25.25s125,28.0382,125,62.625-55.9644,62.625-125,62.625S.25,97.4619.25,62.875"
     },
     "strOffset": {
       "type": "number",

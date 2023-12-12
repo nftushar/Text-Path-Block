@@ -45,10 +45,11 @@ const Settings = ({ attributes, setAttributes }) => {
 					<PanelBody
 						className="bPlPanelBody"
 						title={__("Settings", "text-path")} >
+							
 						<InlineMediaUpload
-							allowedTypes={['image']} 
-							value={mainSvg} // You need to pass the appropriate value from your state
-							onChange={url => setAttributes({ mainSvg: url })} // You need to update the attribute accordingly
+							allowedTypes={['image/svg+xml']}
+							value={mainSvg}
+							onChange={(url) => setAttributes({ mainSvg: url })}
 							label={__('Upload SVG', 'text-path')}
 							placeholder={__('Enter SVG URL', 'text-path')}
 						/>

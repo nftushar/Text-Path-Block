@@ -1,55 +1,44 @@
-/* eslint-disable react/no-children-prop */
-import React, { useEffect, useRef } from "react";
-import Style from "./Style"; // Make sure to import the Style component
-import SVG from 'react-inlinesvg';
-import { useState } from '@wordpress/element';
+import React, { useEffect, useState } from "react";
+import Style from "./Style";
 
 const Path = ({ attributes }) => {
-    const { svgPath, strokeColor, cId, mainText, fillColor, strOffset, mainSvg } = attributes;
-    // console.log(svgRef);
+    const { svgPath, strokeColor, mainText, fillColor, strOffset, mainSvg } = attributes;
+    const [svgContent, setSvgContent] = useState(null);
 
-    const svgRef = useRef(null);
-    const divRef = useRef(null);
-    const [rendered,setRendered]=useState(false)
+    
+
     useEffect(() => {
-        const svgElement = svgRef.current;
-        // const divElement = divRef.current;
+        if (mainSvg) {
+            fetch(mainSvg)
+                .then((response) => response.text())
+                .then((svgContent) => {
+                    setSvgContent(svgContent);
+                })
+                .catch((error) => {
+                    console.error("Error fetching SVG:", error);
+                });
+        }
+    }, [mainSvg]);
 
-        const bbox = svgElement?.getBBox();
-        const newHeight = bbox?.height;
-
-        // Update the height of the SVG container dynamically
-        svgElement?.setAttribute("height", newHeight);
-
-        // Set the width of the div based on the SVG width
-        // divElement.style.width = `${bbox.width}px`;
-    }, [svgPath]); // Trigger the effect whenever svgPath changes
-    const textPath = <textPath href="#MyPath" startOffset={strOffset || 0}>
-        Add Your Curvy Text Here
-    </textPath>
-    useEffect(()=>{
-        const svgFile=document.querySelector('#textSvgPath');
-        const svg=svgFile?.querySelector("svg");
-        const text=svg?.querySelector("text");
-        const textPath=document.createElement("textPath");
-        textPath.setAttribute('href','#MyPath');
-        textPath.setAttribute("startOffset",`${strOffset || 0}`)
-        textPath.innerHTML=mainText;
-        text?.appendChild(textPath)
-        console.log(svg)
-    },[rendered])
     return (
         <>
-            <Style attributes={attributes} clientId={cId} />
-            <div onClick={()=>setRendered()} ref={divRef} id={`bBlocksPath-${cId}`} className="bBlocksPath">
-                <div className="b-text-path" id='textSvgPath'>
-                    {/* {svgRef} */}
-                    <SVG children="hello" src={mainSvg} width={428} text="hello" height="auto"  >
-
-                    </SVG>
-
-                </div>
-            </div >
+            <Style attributes={attributes} />
+            <div data-text={mainText} data-url={mainSvg} data-link-url="">
+                {svgContent && (
+                    <svg xmlns="http://www.w3.org/2000/svg" width="250" height="84.4988" viewBox="0 0 250 84.4988">
+                        {/* Include the dynamically loaded SVG content here */}
+                        <g dangerouslySetInnerHTML={{ __html: svgContent }} />
+                        {/* Render the path with stroke and fill */}
+                        <path d={svgPath} id="e-path-f73d05e" stroke={strokeColor} fill={fillColor}></path>
+                        {/* Render the text */}
+                        <text x="50%" y="50%">
+                            <textPath id="e-text-path-f73d05e" href="#e-path-f73d05e" startOffset={`${strOffset}%`}>
+                                {mainText}
+                            </textPath>
+                        </text>
+                    </svg>
+                )}
+            </div>
         </>
     );
 };
